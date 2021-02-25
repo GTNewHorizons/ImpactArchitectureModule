@@ -15,7 +15,7 @@ public class MainLoader {
 
     public static void registerOreDict() {
         for (int i = 0; i < 16; i++) {
-            OreDictionary.registerOre("CompressedCoal", new ItemStack(Concrete, i));
+            OreDictionary.registerOre("Concrete", new ItemStack(Concrete, i));
         }
     }
 }
