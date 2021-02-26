@@ -30,13 +30,11 @@ public class ImpactArchitectureModule {
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
-        MainLoader.registerOreDict();
     }
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         MainLoader.registerBlocks();
-
     }
 
     @EventHandler
