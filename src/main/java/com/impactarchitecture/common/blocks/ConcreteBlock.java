@@ -25,6 +25,7 @@ import java.util.List;
 public class ConcreteBlock extends BaseBlock {
 
     private static final ConcreteBlock instance = new ConcreteBlock();
+    @SideOnly(Side.CLIENT)
     private IIcon[] icons = new IIcon[16];
 
     private ConcreteBlock() {
@@ -42,6 +43,7 @@ public class ConcreteBlock extends BaseBlock {
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister ir) {
         for (int i = 0; i < icons.length; i++) {
             icons[i] = ir.registerIcon("impact:concrete/ConcreteBlock" + i);
@@ -57,6 +59,7 @@ public class ConcreteBlock extends BaseBlock {
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
     public IIcon getIcon(int side, int meta) {
         return icons[meta];
     }
