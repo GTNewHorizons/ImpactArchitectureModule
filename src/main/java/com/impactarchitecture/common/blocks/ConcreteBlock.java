@@ -25,7 +25,6 @@ import java.util.List;
 public class ConcreteBlock extends BaseBlock {
 
     private static final ConcreteBlock instance = new ConcreteBlock();
-    @SideOnly(Side.CLIENT)
     private IIcon[] icons = new IIcon[16];
 
     private ConcreteBlock() {
@@ -59,7 +58,6 @@ public class ConcreteBlock extends BaseBlock {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
     public IIcon getIcon(int side, int meta) {
         return icons[meta];
     }
