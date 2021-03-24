@@ -8,8 +8,8 @@ import net.minecraft.world.IBlockAccess;
 
 public abstract class BaseBlock extends Block {
 
-    protected BaseBlock() {
-        super(Material.rock);
+    protected BaseBlock(Material material) {
+        super(material);
     }
 
     @Override

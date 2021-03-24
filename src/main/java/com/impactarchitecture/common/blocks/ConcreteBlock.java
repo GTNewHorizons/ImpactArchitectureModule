@@ -3,6 +3,7 @@ package com.impactarchitecture.common.blocks;
 import com.impactarchitecture.common.itemblocks.IBConcrete;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -22,13 +23,15 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 import java.util.List;
 
+import static com.impactarchitecture.ImpactArchitectureModule.TEXTURE_PATH;
+
 public class ConcreteBlock extends BaseBlock {
 
     private static final ConcreteBlock instance = new ConcreteBlock();
     private IIcon[] icons = new IIcon[16];
 
     private ConcreteBlock() {
-        super();
+        super(Material.rock);
         FMLCommonHandler.instance().bus().register(this);
     }
 
@@ -45,7 +48,7 @@ public class ConcreteBlock extends BaseBlock {
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister ir) {
         for (int i = 0; i < icons.length; i++) {
-            icons[i] = ir.registerIcon("impact:concrete/ConcreteBlock" + i);
+            icons[i] = ir.registerIcon(TEXTURE_PATH + ":" + "concrete/ConcreteBlock" + i);
         }
     }
 
