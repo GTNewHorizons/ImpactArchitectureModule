@@ -18,7 +18,7 @@ import java.util.Collections;
 public class ImpactArchitectureModule {
 
     public static final String MODID = "Impact|Architecture";
-    public static final String VERSION = "0.0.1";
+    public static final String VERSION = "GRADLETOKEN_VERSION";
     public static final String ASSET_PREFIX = "Impact|Architecture".toLowerCase();
     public static final String TEXTURE_PATH = "Impact".toLowerCase();
 
